@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(45deg,
+            hsl(181deg 100% 20%) 0%,
+            hsl(177deg 100% 22%) 9%,
+            hsl(173deg 100% 25%) 18%,
+            hsl(167deg 100% 28%) 27%,
+            hsl(162deg 100% 31%) 36%,
+            hsl(147deg 56% 43%) 45%,
+            hsl(129deg 43% 52%) 55%,
+            hsl(105deg 49% 55%) 64%,
+            hsl(88deg 60% 54%) 73%,
+            hsl(74deg 69% 53%) 82%,
+            hsl(64, 75%, 45%) 91%,
+            hsl(55, 63%, 51%) 100%);
+    
+    background-size: 500% 100%;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    animation: animar 4s infinite alternate;
+}
+@keyframes animar{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+
+}
+
+.container {
+    display: inline-grid;
+    margin: 151px;
+    margin-top: 25px;
+    padding: 147px;
+    background-color:aliceblue;
+    border-radius: 4rem;
+    border: 4px solid;
+    box-shadow: 8px 5px 8px #858a91;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+#tarefa {
+    width: 236px;
+    height: 28px;
+}
+
+ul {
+    margin-inline-start: 18px;
+    margin-top: 5px;
+
+}
+
+li {
+    cursor: pointer;
+    background-color: rgb(183, 189, 194);
+    border-block: 0.5px solid #000;
+
+}
+
+
+.list {
+    background-color: rgb(137, 207, 141);
+    text-decoration: line-through;
+}
+
+#cadastrar {
+    width: 95px;
+    height: 28px;
+}
+
+.btn-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 18px;
+
+
+}
