@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    margin-top: 50px;
+    background-color: #2F3644;
+    border-radius: 5px;
+    box-shadow: 5px 8px 15px;
+    color: aliceblue;
+    height: 500px;
+    width: 374px;
+}
+
+header {
+    text-align: center;
+}
+
+form {
+    max-height: 500px;
+}
+
+div {
+    padding: 3px;
+    margin-top: 15px;
+    position: relative;
+
+}
+
+input {
+    width: 100%;
+}
+
+#cep {
+    display: grid;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 48px;
+    width: 50%;
+}
+
+label.error {
+    display: flex;
+    position: absolute;
+    line-height: 1;
+    color: rgb(255 118 118);
+    font-size: 12px;
+    margin:3px;
+}
+
+
+input.error {
+    border: 1px solid red;
+}
+
+.valid {
+    border: 1px solid rgb(69, 173, 21);
+}
