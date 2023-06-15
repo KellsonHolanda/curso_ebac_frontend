@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    
+    background-color:#cae5c8;
+}
+.campoDoFormulario i{
+    visibility: hidden;
+}
+.container{
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    position:relative;
+    background-color:  rgb(255 245 245);
+    margin-top: 5%;
+    border-radius: 5px;
+}
+.campoDoFormulario{
+    position: relative;
+}
+i.fa-exclamation-circle{
+    color: #e95511;
+    visibility: visible;
+}
+i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+#result{
+    margin: 0;
+    color: red;
+    font-size: 13px;
+    border-radius: 7px;
+    background-color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+
