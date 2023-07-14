@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #182C61;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  max-width: 1024px;
+}
+header .container nav {
+  margin-right: 7%;
+}
+header .container nav .menu {
+  display: flex;
+}
+header .container nav .menu li {
+  font-weight: bold;
+  margin-left: 1.5em;
+}
+header .container nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 3.5em 2em;
+}
+section .products {
+  width: 100%;
+  margin-top: 2.5em;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+}
+section .products .product-item img {
+  width: 100%;
+  border-radius: 1em;
+}
+section .products .product-item .product-button {
+  display: block;
+  background-color: #44bd32;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em 0;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  text-decoration: none;
+}
+section .products .product-item .product-button:hover {
+  background-color: #62d151;
+}
+
+@media screen and (max-width: 425px) {
+  header .container {
+    padding: 1em 18px;
+  }
+  header .container nav .menu {
+    display: block;
+  }
+  section > .container {
+    position: absolute;
+  }
+  section > .container .products {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 20em);
+    column-gap: 0;
+    row-gap: 0;
+  }
+  section > .container .products .product-item {
+    margin-bottom: 2em;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  header .container {
+    padding: 1em 43px;
+  }
+  section .container {
+    max-width: 80%;
+  }
+  section .container .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
