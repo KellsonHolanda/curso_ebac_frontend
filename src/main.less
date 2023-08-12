@@ -1,0 +1,144 @@
+@import "colors.less";
+@import "maps.less";
+@mobile: ~"(max-width: 767px)";
+@tablet: ~"(min-width:768px) and (max-width: 1023px)";
+
+.widthPadrao{
+    width:100%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    li {
+        list-style: none;
+    }
+}
+.container {
+    max-width: 1024px;
+    .widthPadrao();
+    margin: 0 auto;
+
+    
+}
+
+header {
+    background-color: @corCabecalho;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+}
+
+
+
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: #medidas[medidaSecundaria];
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    
+}
+
+
+
+section {
+    padding: 35px 0;
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    .widthPadrao();
+
+    .product-item {
+        img{
+            .widthPadrao();
+            border-radius: 16px;
+        }
+        .product-button {
+            display: block;
+            background-color:@corBtn;
+            color: #fff;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: #medidas[medidaPadrao];
+            margin-top:  #medidas[medidaPadrao];
+            text-decoration: none;
+    
+            &:hover{
+                background-color: #4cd137;
+    
+            }
+        }
+        
+    }
+}
+
+.social{
+    margin-top: 31px;
+    background-color: #cccccc;
+    height: 57px;
+    display: flex;
+    align-items: center;
+
+    .socialLinks{
+        display: flex;
+        justify-content: space-between;
+        max-width: 240px;
+        .widthPadrao();
+        margin: 0 auto;
+        li {
+            img {
+                transition: all ease .3s;
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+}
+@media @mobile {
+    
+    .products {
+        display: block;
+
+        .product-item  {
+            margin-bottom: 32px;
+        }
+    }
+}
+@media @tablet {
+    .container {
+        max-width: 80%;
+
+        .products {
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
+        }
+    }
+}
+
