@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./build.styles/main.css">
+    <link rel="stylesheet" href="@@ENDERECO_DO_CSS">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -22,12 +22,14 @@
             </div>
             
         </header>
-        <nav class="projectList">
+        
+        <nav id='projectList' class="projectList">
             <li class="projectList-item"><a href="https://loja-de-oculos-e-relogios-cl8a0r03g-kellsonholanda.vercel.app/#produtos">Visite o Projeto Loja de Óculos</a></li>
             <li class="projectList-item"><a href="https://projeto2-agenda-de-contatos-azure.vercel.app/">Visite o Projeto Agenda Telefônica</a></li>
             <li class="projectList-item"><a href="https://galeria-de-fotos-ashen.vercel.app/">Visite o Projeto Galeria de Fotos</a></li>
             <li class="projectList-item"><a href="https://curso-ebac-frontend-flax.vercel.app/">Visite o Projeto Concessionária de Veículos</a></li>
         </nav>
+        <button onclick="show()">Mostrar/Resumir</button>
         <nav>
             <ul class="socialLinks">
                 <li><a href="#"><img src="./src/images/linkedin.svg" alt="logo do linkedin"></a></li>
@@ -37,6 +39,6 @@
             </ul>
         </nav>
     </div>
-    
+    <script src="@@ENDERECO_DO_JS"></script>
 </body>
 </html>

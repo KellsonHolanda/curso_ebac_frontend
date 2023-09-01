@@ -1,5 +1,6 @@
 @import "variaveis.less";
 @import "maps.less";
+@corTexto:#f5f6fa;
 @breackPointMobile: ~"(max-width:767px)";
 @breackPointTablet: ~"(min-width: 768px) and (max-width:1023px)";
 
@@ -30,14 +31,15 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 
     @media @breackPointMobile{
         max-width:70%;
-        background-color: red;
+        
     }
     @media @breackPointTablet {
         max-width:80%;
-        background-color: yellow;
+        
     }
 }
 header{
@@ -69,6 +71,8 @@ header{
 }
 
 .projectList {
+    
+    animation: aparecer ease-in-out 0.9s forwards;
     &-item{
         a{
             text-decoration: none;
@@ -90,6 +94,42 @@ header{
         }
     }
 
+}
+.slide {
+    
+    animation: resumir 1.1s ease-in-out forwards;
+
+}
+@keyframes resumir{
+    0%{
+        font-size: 16px;
+    }
+    
+    100%{
+        font-size: 0px;
+        display: none;
+    }
+}
+@keyframes aparecer{
+    0%{
+        
+        font-size: 3px;
+        
+        
+    }
+    100%{
+        
+        font-size: 16px;
+        display:block;
+    }
+}
+
+button{
+    width: 136px;
+    padding: 13px;
+    border-radius: 7px;
+    align-self: center;
+    margin-bottom: 16px;
 }
 
 .socialLinks{
