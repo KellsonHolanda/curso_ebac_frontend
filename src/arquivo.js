@@ -15,7 +15,7 @@ function resultado(){
     let i = 0;
     while (i < array.length){
         return array.map(function(item) {
-            if (item.nota>6){
+            if (item.nota > 6){
                 console.log(`O(a) aluno(a) ${item.nome} passou com nota ${item.nota}.`)
             };
     })
