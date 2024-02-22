@@ -7,10 +7,9 @@ const objeto = {
 }
 
 function dizOi(outroNome) {
-  return `tudo bem, ${objeto.nome}, e ${outroNome} `
+  return `Bem vindo, ${objeto.nome}! Você trabalhará com a ${outroNome} no desenvolvimento do projeto. `
 }
 
-// let contador = 0;
 const estado = reactive({
   contador: 0,
   email: '',
@@ -41,7 +40,7 @@ function alterarEmail(evento){
 
 <template>
   <h1> {{ objeto.nome }}</h1>
-  <h2> {{ dizOi("ok.ok") }}</h2>
+  <h2> {{ dizOi("Joana") }}</h2>
   <h2>{{ estado.contador }}</h2>
   <button @click="incrementar" type="button" >Aumentar</button>
 
