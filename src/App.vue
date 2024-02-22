@@ -3,18 +3,21 @@ import { reactive } from 'vue';
 
 const objeto = {
   nome: "João",
-  profissão: "desenvolvedor"
+  profissão: "desenvolvedor",
+  
 }
 
 function dizOi(outroNome) {
   return `Bem vindo, ${objeto.nome}! Você trabalhará com a ${outroNome} no desenvolvimento do projeto. `
-}
+} 
 
 const estado = reactive({
   contador: 0,
   email: '',
   saldo: 5000,
   transferido: 30,
+  nomes: ["Joana", "Paula", "Gian"],
+  nomeAdicionado: ""
   
 } 
 );
@@ -33,8 +36,21 @@ function incrementar() {
 
 function alterarEmail(evento){
   estado.email = evento.target.value;
+}
+
+function adicionarNomes(e){
+  estado.nomeAdicionado = e.target.value;
+}
+
+function cadatrarNome(){
+  if(estado.nomeAdicionado.length >= 3){
+  estado.nomes.push(estado.nomeAdicionado)
+  } else{
+    alert("Número de caracteres insificiente.")
+  }
 
 }
+
 
 </script>
 
@@ -55,6 +71,16 @@ function alterarEmail(evento){
   <input type="number" :class="{invalido: !validador()}" placeholder="digite o valor a ser transferido" @keyup="evento => estado.transferido = evento.target.value">
   <button type="button" v-if="validador()">Transferir</button>
   <span v-else>Não é possível transferir</span>
+
+  <br>
+  <ul>
+    <li v-for="nome in estado.nomes">
+    {{ nome }}
+    </li>
+  </ul>
+  <input  type="text" @keyup="adicionarNomes">
+  <button type="button" @click="cadatrarNome">Cadastrar Nome</button>
+  
 </template>
 
 <style scoped>
