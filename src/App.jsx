@@ -1,4 +1,5 @@
 import Perfil from "./components/Perfil/index";
+import Formulario from "./components/Formulário";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
     <Perfil/>
+    <Formulario/>
     <h1>Olá, {retornaNome()}</h1>
       
     </>
